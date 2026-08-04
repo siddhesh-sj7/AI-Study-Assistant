@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | AI Student Assistant</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+  </head>
+  <body data-page="login">
+    <div data-nav></div>
+
+    <main class="site-shell">
+      <section class="page-header">
+        <div class="container auth-grid">
+          <article class="auth-card reveal">
+            <div class="eyebrow">Login</div>
+            <h1 class="page-title">Welcome back</h1>
+            <p class="page-subtitle">
+              Sign in to continue using your dashboard, chatbot, quiz generator, and notes summarizer.
+            </p>
+          </article>
+
+          <section class="auth-card reveal">
+            <form id="loginForm" class="stack">
+              <div class="field">
+                <label for="loginEmail">Email</label>
+                <input class="input" id="loginEmail" name="email" type="email" placeholder="student@example.com" required />
+              </div>
+
+              <div class="field">
+                <label for="loginPassword">Password</label>
+                <input class="input" id="loginPassword" name="password" type="password" placeholder="Enter your password" required />
+              </div>
+
+              <button class="button full-width" type="submit">Login</button>
+              <div class="message" id="loginMessage"></div>
+            </form>
+
+            <p class="helper-text">
+              New here?
+              <a href="/signup.html"><strong>Create an account</strong></a>
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+  </body>
+</html>

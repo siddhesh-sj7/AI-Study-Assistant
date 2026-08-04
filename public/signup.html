@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup | AI Student Assistant</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+  </head>
+  <body data-page="signup">
+    <div data-nav></div>
+
+    <main class="site-shell">
+      <section class="page-header">
+        <div class="container auth-grid">
+          <article class="auth-card reveal">
+            <div class="eyebrow">Signup</div>
+            <h1 class="page-title">Create your study space</h1>
+            <p class="page-subtitle">
+              Register once, then use the dashboard to chat with the assistant, summarize notes, and generate quizzes.
+            </p>
+          </article>
+
+          <section class="auth-card reveal">
+            <form id="signupForm" class="stack">
+              <div class="field">
+                <label for="signupName">Full name</label>
+                <input class="input" id="signupName" name="name" type="text" placeholder="Your name" required />
+              </div>
+
+              <div class="field">
+                <label for="signupEmail">Email</label>
+                <input class="input" id="signupEmail" name="email" type="email" placeholder="student@example.com" required />
+              </div>
+
+              <div class="field">
+                <label for="signupPassword">Password</label>
+                <input class="input" id="signupPassword" name="password" type="password" placeholder="Minimum 6 characters" required />
+              </div>
+
+              <button class="button full-width" type="submit">Register</button>
+              <div class="message" id="signupMessage"></div>
+            </form>
+
+            <p class="helper-text">
+              Already have an account?
+              <a href="/login.html"><strong>Login here</strong></a>
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+  </body>
+</html>

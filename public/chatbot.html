@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot | AI Student Assistant</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+    <script defer src="/js/chatbot.js"></script>
+  </head>
+  <body data-page="chatbot" data-requires-auth="true">
+    <div data-nav></div>
+
+    <main class="site-shell">
+      <section class="page-header">
+        <div class="container">
+          <div class="section-heading">
+            <div class="eyebrow">AI Chatbot</div>
+            <h1 class="page-title">Ask your doubts in simple language</h1>
+            <p class="page-subtitle">
+              Use the chatbot for concept explanations, revision help, or short study strategies when you get stuck.
+            </p>
+          </div>
+
+          <div class="chat-layout">
+            <section class="panel chat-window reveal">
+              <div class="chat-messages" id="chatMessages"></div>
+
+              <form class="chat-form" id="chatForm">
+                <div class="field">
+                  <label for="chatInput">Your question</label>
+                  <textarea class="textarea" id="chatInput" placeholder="Example: Explain database normalization in simple words."></textarea>
+                </div>
+
+                <div class="chat-actions">
+                  <button class="button" type="submit">Send</button>
+                  <button class="ghost-button" id="clearChat" type="button">Clear chat</button>
+                </div>
+
+                <div class="message" id="chatStatus"></div>
+              </form>
+            </section>
+
+            <aside class="panel reveal">
+              <div class="eyebrow">Ideas</div>
+              <h2 class="page-title">What you can ask</h2>
+              <ul class="chat-panel-list">
+                <li>Explain a topic in beginner-friendly words with one real-life example.</li>
+                <li>Suggest a quick revision plan for tomorrow's exam.</li>
+                <li>Tell me the difference between two concepts in a table format.</li>
+                <li>Give me easy steps to remember a difficult chapter.</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Generator | AI Student Assistant</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+    <script defer src="/js/quiz.js"></script>
+  </head>
+  <body data-page="quiz" data-requires-auth="true">
+    <div data-nav></div>
+
+    <main class="site-shell">
+      <section class="page-header">
+        <div class="container">
+          <div class="section-heading">
+            <div class="eyebrow">Quiz Generator</div>
+            <h1 class="page-title">Practice with topic-based MCQs</h1>
+            <p class="page-subtitle">
+              Enter any subject or chapter name and generate a five-question multiple-choice quiz with automatic score
+              calculation.
+            </p>
+          </div>
+
+          <section class="panel reveal">
+            <div class="field">
+              <label for="quizTopic">Quiz topic</label>
+              <input class="input" id="quizTopic" type="text" placeholder="Example: Operating system, AI basics, HTML forms" />
+            </div>
+
+            <div class="button-row">
+              <button class="button" id="generateQuiz" type="button">Generate quiz</button>
+            </div>
+            <div class="message" id="quizStatus"></div>
+          </section>
+
+          <section class="quiz-output" id="quizResult"></section>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+  </body>
+</html>

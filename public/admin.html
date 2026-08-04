@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owner Analytics | AI Student Assistant</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+    <script defer src="/js/admin.js"></script>
+  </head>
+  <body data-page="admin" data-requires-auth="true" data-requires-owner="true">
+    <div data-nav></div>
+
+    <main class="site-shell">
+      <section class="page-header">
+        <div class="container">
+          <div class="section-heading">
+            <div class="eyebrow">Owner analytics</div>
+            <h1 class="page-title">Private backend analytics</h1>
+            <p class="page-subtitle">
+              This private page is only for the project owner. It gives you a visual view of backend activity, registered
+              users, storage mode, and live AI configuration without exposing that information to normal users.
+            </p>
+          </div>
+
+          <div class="admin-grid">
+            <article class="panel reveal admin-metric" data-reveal-delay="0">
+              <div class="eyebrow">Registered users</div>
+              <strong id="totalUsers">0</strong>
+              <p class="muted">Total accounts currently stored by the backend.</p>
+            </article>
+
+            <article class="panel reveal admin-metric" data-reveal-delay="110">
+              <div class="eyebrow">Storage mode</div>
+              <strong id="storageMode">Loading...</strong>
+              <p class="muted">Shows whether the project is using MongoDB or local file storage.</p>
+            </article>
+
+            <article class="panel reveal admin-metric" data-reveal-delay="220">
+              <div class="eyebrow">AI engine</div>
+              <strong id="aiMode">Loading...</strong>
+              <p class="muted">Shows the live AI provider and active model.</p>
+            </article>
+          </div>
+
+          <div class="admin-grid admin-grid--wide">
+            <article class="panel reveal">
+              <div class="eyebrow">Latest user</div>
+              <h2 class="page-title">Most recent registration</h2>
+              <p class="page-subtitle" id="latestUser">Loading...</p>
+            </article>
+
+            <article class="panel reveal">
+              <div class="eyebrow">Backend source</div>
+              <h2 class="page-title">Where the backend is storing data</h2>
+              <p class="page-subtitle">
+                Current storage path or system:
+                <span class="code-chip" id="backendSource">Loading...</span>
+              </p>
+            </article>
+          </div>
+
+          <div class="admin-grid admin-grid--wide">
+            <article class="panel reveal">
+              <div class="eyebrow">Why this page exists</div>
+              <h2 class="page-title">Your personal analytics space</h2>
+              <p class="page-subtitle">
+                Use this page only for ownership purposes: checking signups, confirming the storage mode, and presenting
+                that your backend is really saving data.
+              </p>
+            </article>
+
+            <article class="panel reveal">
+              <div class="eyebrow">Privacy rule</div>
+              <h2 class="page-title">Not visible to normal users</h2>
+              <p class="page-subtitle">
+                Regular users do not see this link, and the backend API blocks access unless the logged-in email matches
+                your configured owner account.
+              </p>
+            </article>
+          </div>
+
+          <section class="panel reveal">
+            <div class="eyebrow">User records</div>
+            <h2 class="page-title">Registered users table</h2>
+            <p class="page-subtitle">
+              This is the visual backend view of all registered users. Password hashes are hidden for safety.
+            </p>
+            <div class="message" id="adminStatus"></div>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Registered at</th>
+                  </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                  <tr>
+                    <td colspan="4">Loading backend data...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+  </body>
+</html>

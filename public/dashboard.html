@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | AI Student Assistant</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+  </head>
+  <body data-page="dashboard" data-requires-auth="true">
+    <div data-nav></div>
+
+    <main class="site-shell">
+      <section class="page-header">
+        <div class="container dashboard-grid">
+          <article class="panel reveal" data-reveal-direction="left">
+            <div class="eyebrow">Dashboard</div>
+            <h1 class="page-title">Your control panel</h1>
+            <p class="page-subtitle" id="dashboardGreeting">Welcome back. Ready for your next study session?</p>
+
+            <div class="dashboard-highlight">
+              Move through your study session like a workflow: ask the chatbot to understand, summarize the topic to condense,
+              then use the quiz tool to check whether the concept really stayed with you.
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card reveal" data-reveal-delay="0">
+                <span class="stat-label">Core tools</span>
+                <strong><span data-count-to="3">0</span></strong>
+                <span class="muted">Chatbot, summarizer, and quiz in one place.</span>
+              </div>
+              <div class="stat-card reveal" data-reveal-delay="110">
+                <span class="stat-label">One dashboard</span>
+                <strong><span data-count-to="1">0</span></strong>
+                <span class="muted">A single study flow instead of many scattered tabs.</span>
+              </div>
+              <div class="stat-card reveal" data-reveal-delay="220">
+                <span class="stat-label">Ready speed</span>
+                <strong><span data-count-to="1" data-count-prefix="~">0</span><span class="stat-suffix">s</span></strong>
+                <span class="muted">Fast responses for smooth live demos and practice sessions.</span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="panel reveal" data-reveal-direction="right" data-reveal-delay="120">
+            <div class="eyebrow">Quick actions</div>
+            <h2 class="page-title">What do you want to do next?</h2>
+            <div class="button-row">
+              <a class="button" href="/chatbot.html">Open chatbot</a>
+              <a class="outline-button" href="/admin.html" data-owner-only hidden>Open owner analytics</a>
+              <a class="outline-button" href="/summarizer.html">Summarize notes</a>
+              <a class="outline-button" href="/quiz.html">Generate quiz</a>
+              <button class="ghost-button" id="dashboardLogout" type="button">Logout</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Study tools</h2>
+            <p class="page-subtitle">Jump into the tool you need without leaving the platform.</p>
+          </div>
+
+          <div class="tool-grid">
+            <article class="tool-card reveal" data-reveal-delay="0">
+              <div class="tool-icon">C</div>
+              <h3>Chatbot</h3>
+              <p>Ask doubts, request easy explanations, or get a short study strategy for your subject.</p>
+              <div class="button-row">
+                <a class="outline-button" href="/chatbot.html">Go to chatbot</a>
+              </div>
+            </article>
+
+            <article class="tool-card reveal" data-reveal-delay="110">
+              <div class="tool-icon">S</div>
+              <h3>Summarizer</h3>
+              <p>Paste large notes and receive concise key points plus a recap you can revise quickly.</p>
+              <div class="button-row">
+                <a class="outline-button" href="/summarizer.html">Go to summarizer</a>
+              </div>
+            </article>
+
+            <article class="tool-card reveal" data-reveal-delay="220">
+              <div class="tool-icon">Q</div>
+              <h3>Quiz</h3>
+              <p>Enter a topic, create multiple-choice questions, and calculate your score instantly.</p>
+              <div class="button-row">
+                <a class="outline-button" href="/quiz.html">Go to quiz</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+  </body>
+</html>

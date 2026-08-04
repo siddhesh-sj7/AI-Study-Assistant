@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summarizer | AI Student Assistant</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+    <script defer src="/js/summarizer.js"></script>
+  </head>
+  <body data-page="summarizer" data-requires-auth="true">
+    <div data-nav></div>
+
+    <main class="site-shell">
+      <section class="page-header">
+        <div class="container two-column">
+          <section class="panel reveal">
+            <div class="eyebrow">Notes Summarizer</div>
+            <h1 class="page-title">Turn long notes into quick revision points</h1>
+            <p class="page-subtitle">
+              Paste classroom notes, textbook content, or self-written material to generate a short summary and key points.
+            </p>
+
+            <div class="stack">
+              <div class="field">
+                <label for="notesInput">Paste your notes</label>
+                <textarea
+                  class="textarea"
+                  id="notesInput"
+                  placeholder="Paste at least a short paragraph of notes here..."
+                ></textarea>
+              </div>
+
+              <div class="button-row">
+                <button class="button" id="summarizeBtn" type="button">Summarize</button>
+              </div>
+              <div class="message" id="summaryStatus"></div>
+            </div>
+          </section>
+
+          <section class="summary-output" id="summaryResult"></section>
+        </div>
+      </section>
+    </main>
+
+    <div data-footer></div>
+  </body>
+</html>

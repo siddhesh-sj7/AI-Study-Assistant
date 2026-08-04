@@ -1,0 +1,21 @@
+{
+  "name": "ai-study-assistant",
+  "version": "1.0.0",
+  "description": "Full-stack AI Student Assistant for study support, quizzes, and note summaries.",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "node scripts/sync-public-assets.js",
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^8.19.2",
+    "openai": "^6.32.0"
+  }
+}
