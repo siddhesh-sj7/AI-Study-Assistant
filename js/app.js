@@ -5,6 +5,7 @@
   const page = document.body.dataset.page || "home";
   const requiresAuth = document.body.dataset.requiresAuth === "true";
   const requiresOwner = document.body.dataset.requiresOwner === "true";
+  const API_BASE = window.AI_API_BASE || "";
 
   function escapeHtml(value) {
     return String(value || "")
@@ -222,7 +223,8 @@
       headers.Authorization = `Bearer ${session.token}`;
     }
 
-    const response = await fetch(url, {
+    const fullUrl = API_BASE ? `${API_BASE}${url}` : url;
+    const response = await fetch(fullUrl, {
       ...options,
       headers,
     });
