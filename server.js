@@ -19,7 +19,7 @@ try {
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 const HOST = String(process.env.HOST || "0.0.0.0").trim() || "0.0.0.0";
-const DATA_DIR = path.join(__dirname, "data");
+const DATA_DIR = process.env.VERCEL || process.env.AWS_REGION ? path.join("/tmp", "data") : path.join(__dirname, "data");
 const USERS_FILE = path.join(DATA_DIR, "users.json");
 const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || "http://127.0.0.1:11434";
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "llama3.2:3b";
